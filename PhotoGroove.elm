@@ -7,10 +7,14 @@ urlPrefix =
   "http://elm-in-action.com/"
 
 initialModel =
-    [ { url = "1.jpeg" }
-    , { url = "2.jpeg" }
-    , { url = "3.jpeg" }
-    ]
+  { photos =
+      [ { url = "1.jpeg" }
+      , { url = "2.jpeg" }
+      , { url = "3.jpeg" }
+      ]
+  , selectedUrl = "1.jpeg"
+  }
+
 
 view model =
   div [ class "content" ]
