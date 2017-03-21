@@ -15,10 +15,10 @@ initialModel =
 view model =
   div [ class "content" ]
       [ h1 [] [ text "Photo Groove" ]
-      , div [ id "thumbnails" ] []
+      , div [ id "thumbnails" ] ( List.map viewThumbnail model)
       ]
 viewThumbnail thumbnail =
-  img [ src urlPrefix ++ thumbnail.url ] []
+  img [ src (urlPrefix ++ thumbnail.url) ] []
 
 main =
     view initialModel
